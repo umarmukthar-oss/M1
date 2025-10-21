@@ -23,18 +23,7 @@ int main() {
 ## OUTPUT:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+![alt text](1.png)
 
 
 
@@ -55,16 +44,24 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int a;
+    printf("Enter a value: ");
+    scanf("%d", &a);
+    if(a > 0)
+        printf("Positive number");
+    else
+        printf("Not a positive number");
+    return 0;
+}
+```
 
 # OUTPUT:
 
 
-
-
-
-
-
-
+![alt text](2.png)
 
 
 
@@ -89,12 +86,22 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main() {
+    float a, b;
+    printf("Enter two fractions: ");
+    scanf("%f %f", &a, &b);
+    float min = (a < b) ? a : b;
+    printf("Minimum = %.2f", min);
+    return 0;
+}
+```
 ## OUTPUT:
 
 
 
-
+![alt text](3.png)
 
 
 
@@ -120,11 +127,22 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int a;
+    printf("Enter a value: ");
+    scanf("%d", &a);
+    if(a == 1)
+        printf("Value is 1");
+    return 0;
+}
+```
 
 ## OUTPUT:
 
 
-
+![alt text](4.png)
 
 
 
@@ -156,8 +174,32 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int m1, m2, m3, total;
+    float per;
+    printf("Enter marks of three subjects: ");
+    scanf("%d %d %d", &m1, &m2, &m3);
+    total = m1 + m2 + m3;
+    per = total / 3.0;
+    printf("Total = %d\nPercentage = %.2f\n", total, per);
+    if(m1 < 35 || m2 < 35 || m3 < 35 || per < 35)
+        printf("Fail");
+    else if(per >= 60)
+        printf("First Division");
+    else if(per >= 50)
+        printf("Second Division");
+    else
+        printf("Pass Division");
+    return 0;
+}
+```
 
 ## OUTPUT:
+
+![alt text](5.png)
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
